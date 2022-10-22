@@ -75,6 +75,10 @@ const Contact = () => {
           Submit
         </button>
       </form>
+      <p className="text-sm mt-8 -mb-8">
+        if email not submitted ping me at
+        <br /> mail(dot).nirajacharya(at)gmail(dot)com
+      </p>
     </div>
   );
 };

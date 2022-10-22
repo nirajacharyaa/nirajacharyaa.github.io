@@ -27,8 +27,11 @@ const About = () => {
         <span className="font-bold p-8 text-xs">
           <a href="https://twitter.com/iamnirajacharya">TWT</a>
         </span>
-        <span className="font-bold text-xs">
+        <span className="font-bold pr-8 text-xs">
           <a href="https://github.com/nirajacharyaa">GH</a>
+        </span>
+        <span className="font-bold text-xs">
+          <a href="https://discord.com/users/niraj#2858">DSCRD</a>
         </span>
       </p>
       <p className="text-lg mt-6 pb-2 border-b-2 select-none">
