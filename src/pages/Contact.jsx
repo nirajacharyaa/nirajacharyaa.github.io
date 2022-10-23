@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 
 const Contact = () => {
+  const [isDisabled, setIsDisabled] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +17,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setIsDisabled(true);
     const result = await fetch(
       "https://contact-form-mailer-v1.herokuapp.com/api/v1/sendmail",
       {
@@ -35,8 +36,10 @@ const Contact = () => {
         email: "",
         message: "",
       });
+      setIsDisabled(false);
     } else {
       toast.error(data.message);
+      setIsDisabled(false);
     }
   };
 
@@ -71,13 +74,16 @@ const Contact = () => {
           onChange={handleChange}
           value={formData.message}
         ></textarea>
-        <button className="block mt-4 bg-white text-primaryBlack font-bold text-sm px-4 py-2 rounded-md">
+        <button
+          className={`block mt-4 bg-white text-primaryBlack font-bold text-sm px-4 py-2 rounded-md `}
+          disabled={isDisabled}
+        >
           Submit
         </button>
       </form>
       <p className="text-sm mt-8 -mb-8">
         if email not submitted ping me at
-        <br /> mail(dot).nirajacharya(at)gmail(dot)com
+        <br /> mail(dot)nirajacharya(at)gmail(dot)com
       </p>
     </div>
   );
