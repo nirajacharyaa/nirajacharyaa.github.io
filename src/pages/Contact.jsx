@@ -78,11 +78,11 @@ const Contact = () => {
           className={`block mt-4 bg-white text-primaryBlack font-bold text-sm px-4 py-2 rounded-md `}
           disabled={isDisabled}
         >
-          Submit
+          {isDisabled ? "Sending.." : "Send"}
         </button>
       </form>
       <p className="text-sm mt-8 -mb-8">
-        if email not submitted ping me at
+        if email not sent ping me at
         <br /> mail(dot)nirajacharya(at)gmail(dot)com
       </p>
     </div>
