@@ -18,16 +18,13 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsDisabled(true);
-    const result = await fetch(
-      "https://contact-form-mailer-v1.herokuapp.com/api/v1/sendmail",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const result = await fetch("https://vast-cyan-chimpanzee-tutu.cyclic.app", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
     const data = await result.json();
     if (data.success) {
       toast.success(data.message);
