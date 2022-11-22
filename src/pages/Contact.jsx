@@ -18,7 +18,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsDisabled(true);
-    const result = await fetch("https://vast-cyan-chimpanzee-tutu.cyclic.app", {
+    const result = await fetch("https://vast-cyan-chimpanzee-tutu.cyclic.app/api/v1/sendmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
