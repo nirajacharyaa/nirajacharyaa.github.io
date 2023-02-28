@@ -23,7 +23,7 @@ function App() {
       <SetIndexContext.Provider value={{ setActiveIndex, setImageIndex }}>
         <div className="bg-primaryBlack text-white flex flex-col max-w-4xl mx-auto transition-all duration-500">
           <img src={images[imageIndex]} className="md:mt-20" />
-          <div className=" -mt-24 md:-mt-40 max-w-3xl px-10 sm:px-32 flex flex-col gap-10">
+          <div className="-mt-24 md:-mt-40 max-w-3xl px-10 sm:px-32 flex flex-col gap-10">
             <div className="font-gothamb text-2xl  leading-none">
               tech
               <br />
